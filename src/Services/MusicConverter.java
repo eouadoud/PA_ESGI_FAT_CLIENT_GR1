@@ -8,6 +8,7 @@ public class MusicConverter {
     }
 
     public String convertTowav(String trackName, String trackPath){
+        System.out.println( " ------------- Converting [[ "+trackName+" ]] ------------- ");
         String destination = "./tracksdb/notanalysed/"+trackName+".wav";
         try {
             new Converter().convert(trackPath, destination);
@@ -15,7 +16,6 @@ public class MusicConverter {
             e.printStackTrace();
         }
         return destination;
-
     }
 
 }

@@ -24,8 +24,7 @@ public class PropertiesReader {
         }
         Properties props = new Properties();
         props.load(reader);
-
+        System.out.println( " ------------- Propoerties readed ------------- ");
         return props;
-
     }
 }

@@ -51,6 +51,7 @@ public class AMQPConsumer {
             String message = new String(delivery.getBody());
             float simScore = 0;
             if (!message.isBlank() && !message.isEmpty()) {
+                System.out.println("message:" + message);
                 JSONObject music = new JSONObject(message);
                 String fileLocation = trackDownload.runDownload(dLink + music.get("fileName"),
                         (String) music.get("musicTitle"), token);
